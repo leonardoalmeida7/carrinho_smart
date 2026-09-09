@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #f9f9ff;
+  --color-surface-dim: #d3daef;
+  --color-surface-container: #e9edff;
+  --color-surface-container-low: #f1f3ff;
+  --color-on-surface: #141b2b;
+  --color-on-surface-variant: #3d4a42;
+  --color-outline: #6d7a72;
+  --color-outline-variant: #bccac0;
+  --color-primary: #006948;
+  --color-primary-light: #059669;
+  --color-primary-container: #00855d;
+  --color-on-primary: #ffffff;
+  --color-secondary: #006c49;
+  --color-secondary-container: #6cf8bb;
+  --color-mint: #ecfdf5;
+  --color-mint-dark: #85f8c4;
+  --color-tertiary: #f59e0b;
+  --color-tertiary-container: #fef3c7;
+  --color-error: #e11d48;
+  --color-error-container: #fff1f2;
+  --color-stone-border: #e7e5e4;
+  --color-stone-muted: #6b7280;
+  --color-card: #ffffff;
+  --color-canvas: #fafaf9;
+
+  --font-display: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+
+  --shadow-card: 0 2px 8px -2px rgba(17, 24, 39, 0.04), 0 1px 3px 0 rgba(17, 24, 39, 0.02);
+  --shadow-elevated: 0 10px 25px -5px rgba(17, 24, 39, 0.08), 0 8px 10px -6px rgba(17, 24, 39, 0.03);
+  --shadow-bar: 0 -4px 20px -2px rgba(5, 150, 105, 0.08), 0 -2px 6px -1px rgba(0, 0, 0, 0.04);
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  font-family: var(--font-body);
+  background: var(--color-surface);
+  color: var(--color-on-surface);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
+.shadow-elevated {
+  box-shadow: var(--shadow-elevated);
+}
+
+.shadow-bar {
+  box-shadow: var(--shadow-bar);
+}
+
+@keyframes check-pop {
+  0% { transform: scale(0.8); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.animate-check {
+  animation: check-pop 0.2s ease-out;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
