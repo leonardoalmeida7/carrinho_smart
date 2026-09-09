@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import { ListPage } from './pages/ListPage'
 import { NewItemPage } from './pages/NewItemPage'
 import { HistoryPage } from './pages/HistoryPage'
@@ -33,7 +33,7 @@ export default function App() {
         {isOnline ? 'Conectado • você pode sincronizar normalmente' : 'Modo offline • seus dados continuam disponíveis'}
       </div>
 
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<ListPage />} />
           <Route path="/novo-item" element={<NewItemPage />} />
@@ -41,7 +41,7 @@ export default function App() {
           <Route path="/historico" element={<HistoryPage />} />
           <Route path="/ajustes" element={<SettingsPage />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   )
 }

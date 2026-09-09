@@ -4,6 +4,7 @@ import { defineConfig } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
+  base: './',
   plugins: [
     react(),
     tailwindcss(),
@@ -17,8 +18,8 @@ export default defineConfig({
         theme_color: '#006948',
         background_color: '#f9f9ff',
         display: 'standalone',
-        start_url: '/',
-        scope: '/',
+        start_url: './',
+        scope: './',
         orientation: 'portrait',
         icons: [
           {
