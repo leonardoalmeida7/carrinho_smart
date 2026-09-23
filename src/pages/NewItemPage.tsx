@@ -15,7 +15,7 @@ import { Button } from '../components/ui/Button'
 import { Stepper } from '../components/ui/Stepper'
 import { useAppStore } from '../store/useAppStore'
 import {
-  DEFAULT_CATEGORIES,
+  /* DEFAULT_CATEGORIES, */
   ITEM_SUGGESTIONS,
   suggestCategory,
 } from '../lib/constants'
@@ -197,7 +197,7 @@ export function NewItemPage() {
           />
         </div>
 
-        <label className="mb-2 block text-sm font-semibold">Categoria</label>
+        {/* <label className="mb-2 block text-sm font-semibold">Categoria</label>
         <div className="mb-4 flex flex-wrap gap-2">
           {DEFAULT_CATEGORIES.slice(0, 3).map((cat) => (
             <button
@@ -210,10 +210,10 @@ export function NewItemPage() {
                   : 'border border-stone-border bg-white text-stone-muted'
               }`}
             >
-              {cat.icon} {cat.label}
+              {cat.label}
             </button>
           ))}
-        </div>
+        </div> */}
 
         <div className="mb-4 flex items-center justify-between rounded-xl bg-mint p-4">
           <div className="flex items-center gap-3">

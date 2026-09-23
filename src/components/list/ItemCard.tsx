@@ -1,7 +1,7 @@
 import { MoreVertical, Pencil } from 'lucide-react'
 import type { ShoppingItem } from '../../types'
 import { formatCurrency, formatQuantity, itemSubtotal } from '../../lib/format'
-import { DEFAULT_CATEGORIES } from '../../lib/constants'
+//import { DEFAULT_CATEGORIES } from '../../lib/constants'
 import { Checkbox } from '../ui/Checkbox'
 
 interface ItemCardProps {
@@ -13,7 +13,7 @@ interface ItemCardProps {
 
 export function ItemCard({ item, onToggle, onEdit, onRemove }: ItemCardProps) {
   const subtotal = itemSubtotal(item.quantity, item.unitPrice)
-  const category = DEFAULT_CATEGORIES.find((c) => c.id === item.category)
+  // const category = DEFAULT_CATEGORIES.find((c) => c.id === item.category)
 
   return (
     <div
@@ -31,7 +31,7 @@ export function ItemCard({ item, onToggle, onEdit, onRemove }: ItemCardProps) {
             item.inCart ? 'text-stone-muted line-through' : 'text-on-surface'
           }`}
         >
-          {category?.icon} {item.name}
+          {/* {category?.icon} */} {item.name}
         </p>
         <p className="text-xs text-stone-muted">
           {formatQuantity(item.quantity, item.unit)} × {formatCurrency(item.unitPrice)}

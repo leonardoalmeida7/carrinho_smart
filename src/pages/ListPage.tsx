@@ -5,7 +5,6 @@ import { BudgetPanel } from '../components/list/BudgetPanel'
 import { QuickAddBar } from '../components/list/QuickAddBar'
 import { FilterChips } from '../components/list/FilterChips'
 import { ItemSection } from '../components/list/ItemSection'
-import { SavingsBanner } from '../components/list/SavingsBanner'
 import { ListFooter } from '../components/list/ListFooter'
 import { useAppStore } from '../store/useAppStore'
 import { useHapticFeedback } from '../hooks/useDeviceFeatures'
@@ -86,7 +85,6 @@ export function ListPage() {
         </div>
       )}
 
-      <SavingsBanner />
     </AppShell>
   )
 }

@@ -1,6 +1,11 @@
 import type { CategoryId } from '../types'
 
-export const DEFAULT_CATEGORIES: { id: CategoryId; label: string; icon: string; color: string }[] = [
+/* export const DEFAULT_CATEGORIES: {
+  id: CategoryId
+  label: string
+  icon?: string
+  color: string
+}[] = [
   { id: 'hortifruti', label: 'Hortifrúti', icon: '🍎', color: '#059669' },
   { id: 'padaria', label: 'Padaria', icon: '🍞', color: '#92400e' },
   { id: 'acougue', label: 'Açougue', icon: '🥩', color: '#dc2626' },
@@ -8,7 +13,7 @@ export const DEFAULT_CATEGORIES: { id: CategoryId; label: string; icon: string; 
   { id: 'limpeza', label: 'Limpeza', icon: '🧹', color: '#6b7280' },
   { id: 'bebidas', label: 'Bebidas', icon: '🥤', color: '#059669' },
 ]
-
+ */
 export const ITEM_SUGGESTIONS = [
   'Leite',
   'Pão francês',

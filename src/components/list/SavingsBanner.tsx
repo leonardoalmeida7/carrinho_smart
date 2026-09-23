@@ -1,3 +1,7 @@
+/* 
+
+Componente SavingsBanner.tsx responsavel por exibir um banner de economia baseado no orçamento e total da lista.
+
 import { PiggyBank } from 'lucide-react'
 import { useAppStore } from '../../store/useAppStore'
 import { formatCurrency } from '../../lib/format'
@@ -22,3 +26,4 @@ export function SavingsBanner() {
     </div>
   )
 }
+ */

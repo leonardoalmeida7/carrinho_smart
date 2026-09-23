@@ -7,6 +7,7 @@ import { SettingsPage } from './pages/SettingsPage'
 
 export default function App() {
   const [isOnline, setIsOnline] = useState(() => navigator.onLine)
+  const [showConnectionBanner, setShowConnectionBanner] = useState(true)
 
   useEffect(() => {
     const updateConnectionStatus = () => setIsOnline(navigator.onLine)
@@ -20,18 +21,30 @@ export default function App() {
     }
   }, [])
 
+  useEffect(() => {
+    setShowConnectionBanner(true)
+
+    const timeoutId = window.setTimeout(() => {
+      setShowConnectionBanner(false)
+    }, 3000)
+
+    return () => window.clearTimeout(timeoutId)
+  }, [isOnline])
+
   return (
     <>
-      <div
-        aria-live="polite"
-        className={`fixed inset-x-3 top-3 z-50 rounded-full border px-3 py-2 text-center text-xs font-semibold shadow-sm transition-all ${
-          isOnline
-            ? 'border-emerald-200 bg-emerald-50 text-emerald-700'
-            : 'border-amber-200 bg-amber-50 text-amber-700'
-        }`}
-      >
-        {isOnline ? 'Conectado • você pode sincronizar normalmente' : 'Modo offline • seus dados continuam disponíveis'}
-      </div>
+      {showConnectionBanner && (
+        <div
+          aria-live="polite"
+          className={`fixed inset-x-3 top-3 z-50 rounded-full border px-3 py-2 text-center text-xs font-semibold shadow-sm transition-all ${
+            isOnline
+              ? 'border-emerald-200 bg-emerald-50 text-emerald-700'
+              : 'border-amber-200 bg-amber-50 text-amber-700'
+          }`}
+        >
+          {isOnline ? 'Conectado • você pode sincronizar normalmente' : 'Modo offline • seus dados continuam disponíveis'}
+        </div>
+      )}
 
       <HashRouter>
         <Routes>

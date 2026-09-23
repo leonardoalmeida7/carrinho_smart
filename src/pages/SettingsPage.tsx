@@ -15,7 +15,7 @@ import { Button } from '../components/ui/Button'
 import { ProgressBar } from '../components/ui/ProgressBar'
 import { Toggle } from '../components/ui/Toggle'
 import { useAppStore } from '../store/useAppStore'
-import { DEFAULT_CATEGORIES } from '../lib/constants'
+//import { DEFAULT_CATEGORIES } from '../lib/constants'
 import { formatCurrency, parseCurrencyInput } from '../lib/format'
 
 export function SettingsPage() {
@@ -161,7 +161,7 @@ export function SettingsPage() {
         <p className="mb-3 text-xs text-stone-muted">
           Toque para personalizar ícones ou tags de identificação nas gôndolas.
         </p>
-        <div className="grid grid-cols-2 gap-2">
+        {/* <div className="grid grid-cols-2 gap-2">
           {DEFAULT_CATEGORIES.map((cat) => (
             <button
               key={cat.id}
@@ -175,7 +175,7 @@ export function SettingsPage() {
               {cat.label}
             </button>
           ))}
-        </div>
+        </div> */}
       </section>
 
       <section className="mt-4 shadow-card rounded-2xl border border-stone-100 bg-white p-4">
